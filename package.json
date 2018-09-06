@@ -13,6 +13,5 @@
   "license": "BSD",
   "peerDependencies": {
     "react-native": "^0.56.0"
-  },
-  "scope": "dferro"
+  }
 }
