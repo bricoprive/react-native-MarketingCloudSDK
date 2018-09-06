@@ -21,13 +21,13 @@ apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion safeExtGet('compileSdkVersion', 26)
-    //noinspection GradleDependency
-    buildToolsVersion safeExtGet('buildToolsVersion', '26.0.3')
+    buildToolsVersion safeExtGet('buildToolsVersion', '26.0.2')
 
     defaultConfig {
         minSdkVersion safeExtGet('minSdkVersion', 16)
-        //noinspection OldTargetApi
         targetSdkVersion safeExtGet('targetSdkVersion', 26)
+        versionCode 1
+        versionName '1.0'
     }
     lintOptions {
         abortOnError false
@@ -54,6 +54,6 @@ repositories {
 
 dependencies {
     //noinspection GradleDynamicVersion
-    compile('com.facebook.react:react-native:0.56.0') { force = true }
-    compile 'com.salesforce.marketingcloud:marketingcloudsdk:5.6.3'
+    compile("com.facebook.react:react-native:0.56.0") { force = true }
+    compile "com.salesforce.marketingcloud:marketingcloudsdk:5.6.2"
 }
