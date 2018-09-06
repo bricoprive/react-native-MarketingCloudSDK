@@ -24,8 +24,8 @@
 
 /* Begin PBXFileReference section */
 		134814201AA4EA6300B7C361 /* libRNMarketingCloudSDK.temp_caseinsensitive_rename.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNMarketingCloudSDK.temp_caseinsensitive_rename.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		B3E7B5881CC2AC0600A0062D /* RNMarketingCloudSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNMarketingCloudSDK.h; sourceTree = "<group>"; };
-		B3E7B5891CC2AC0600A0062D /* RNMarketingCloudSDK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNMarketingCloudSDK.m; sourceTree = "<group>"; };
+		B3E7B5881CC2AC0600A0062D /* RNMarketingCloudSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RNMarketingCloudSDK.h; path = RNMarketingCloudSDK/RNMarketingCloudSDK.h; sourceTree = "<group>"; };
+		B3E7B5891CC2AC0600A0062D /* RNMarketingCloudSDK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RNMarketingCloudSDK.m; path = RNMarketingCloudSDK/RNMarketingCloudSDK.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -224,8 +224,6 @@
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../../../React/**",
 					"$(SRCROOT)/../../react-native/React/**",
-					"$(SRCROOT)/../../../../ios/Pods/**",
-					"$(SRCROOT)/../../../ios/Pods/**",
 				);
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
@@ -242,8 +240,6 @@
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../../../React/**",
 					"$(SRCROOT)/../../react-native/React/**",
-					"$(SRCROOT)/../../../../ios/Pods/**",
-					"$(SRCROOT)/../../../ios/Pods/**",
 				);
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
