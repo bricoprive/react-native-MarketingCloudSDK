@@ -36,26 +36,19 @@ android {
 
 
 repositories {
-    mavenLocal()
+    maven { url "http://salesforce-marketingcloud.github.io/JB4A-SDK-Android/repository" }
+    maven { url "$rootDir/../node_modules/react-native/android" }
+
     jcenter()
 
     maven {
         url 'https://maven.google.com/'
         name 'Google'
     }
-
-    maven {
-        url "$rootDir/../node_modules/react-native/android"
-    }
-}
-repositories {
-    maven {
-        url "http://salesforce-marketingcloud.github.io/JB4A-SDK-Android/repository"
-    }
 }
 
 dependencies {
     //noinspection GradleDynamicVersion
     compile("com.facebook.react:react-native:0.56.0") { force = true }
-    compile "com.salesforce.marketingcloud:marketingcloudsdk:5.6.2"
+    compile "com.salesforce.marketingcloud:marketingcloudsdk:5.6.3"
 }
