@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
   s.author       = { 'Daniel Ferro' => 'dlcerva@gmail.com' }
   s.license      = 'MIT'
   s.homepage     = 'https://github.com/dlferro/react-native-MarketingCloudSDK'
-  s.source       = { :git => "https://github.com/dlferro/react-native-MarketingCloudSDK" }
+  s.source       = { :git => "https://github.com/dlferro/react-native-MarketingCloudSDK.git" }
   s.source_files = 'RNMarketingCloudSDK/*'
   s.platform     = :ios, "9.0"
   s.dependency 'MarketingCloudSDK'
