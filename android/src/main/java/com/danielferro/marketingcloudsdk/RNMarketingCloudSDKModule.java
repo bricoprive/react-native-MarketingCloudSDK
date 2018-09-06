@@ -28,8 +28,9 @@ public class RNMarketingCloudSDKModule extends ReactContextBaseJavaModule {
 
   private final ReactApplicationContext reactContext;
 
-  public RNMarketingCloudSdkModule(ReactApplicationContext reactContext) {
+  public RNMarketingCloudSDKModule(ReactApplicationContext reactContext) {
     super(reactContext);
+    
     this.reactContext = reactContext;
   }
 
