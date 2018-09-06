@@ -3,7 +3,7 @@ require 'json'
 pjson = JSON.parse(File.read('package.json'))
 
 Pod::Spec.new do |s|
-  s.name             = "react-native-marketing-cloud-sdk"
+  s.name             = "RNMarketingCloudSDK"
   s.version          = pjson["version"]
   s.summary          = pjson["description"]
   s.requires_arc     = true
