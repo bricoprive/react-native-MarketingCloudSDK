@@ -15,7 +15,7 @@ import com.facebook.react.bridge.WritableMap;
 import com.facebook.react.bridge.WritableNativeMap;
 
 import com.salesforce.marketingcloud.MarketingCloudConfig;
-import com.salesforce.marketingcloud.MarketingCloudSDK;
+import com.salesforce.marketingcloud.MarketingCloudSdk;
 import com.salesforce.marketingcloud.messages.inbox.InboxMessage;
 import com.salesforce.marketingcloud.messages.inbox.InboxMessageManager;
 import com.salesforce.marketingcloud.messages.push.PushMessageManager;
@@ -36,7 +36,7 @@ public class RNMarketingCloudSDKModule extends ReactContextBaseJavaModule {
 
   @Override
   public String getName() {
-    return "MarketingCloudSDK";
+    return "MarketingCloudSdk";
   }
 
   /*
@@ -45,9 +45,9 @@ public class RNMarketingCloudSDKModule extends ReactContextBaseJavaModule {
 
   @ReactMethod
   public void setContactKey(final String contactKey, final Promise promise) {
-    MarketingCloudSDK.requestSdk(new MarketingCloudSDK.WhenReadyListener() {
+    MarketingCloudSdk.requestSdk(new MarketingCloudSdk.WhenReadyListener() {
       @Override
-      public void ready(@NonNull MarketingCloudSDK marketingCloudSdk) {
+      public void ready(@NonNull MarketingCloudSdk marketingCloudSdk) {
         RegistrationManager registrationManager = marketingCloudSdk.getRegistrationManager();
 
         Boolean status = registrationManager
@@ -62,9 +62,9 @@ public class RNMarketingCloudSDKModule extends ReactContextBaseJavaModule {
 
   @ReactMethod
   public void contactKey(final Promise promise) {
-    MarketingCloudSDK.requestSdk(new MarketingCloudSDK.WhenReadyListener() {
+    MarketingCloudSdk.requestSdk(new MarketingCloudSdk.WhenReadyListener() {
       @Override
-      public void ready(@NonNull MarketingCloudSDK marketingCloudSdk) {
+      public void ready(@NonNull MarketingCloudSdk marketingCloudSdk) {
         RegistrationManager registrationManager = marketingCloudSdk.getRegistrationManager();
 
         String contactKey = registrationManager.getContactKey();
@@ -76,9 +76,9 @@ public class RNMarketingCloudSDKModule extends ReactContextBaseJavaModule {
 
   @ReactMethod
   public void addTag(final String tag, final Promise promise) {
-    MarketingCloudSDK.requestSdk(new MarketingCloudSDK.WhenReadyListener() {
+    MarketingCloudSdk.requestSdk(new MarketingCloudSdk.WhenReadyListener() {
       @Override
-      public void ready(@NonNull MarketingCloudSDK marketingCloudSdk) {
+      public void ready(@NonNull MarketingCloudSdk marketingCloudSdk) {
         RegistrationManager registrationManager = marketingCloudSdk.getRegistrationManager();
 
         Boolean status = registrationManager
@@ -93,9 +93,9 @@ public class RNMarketingCloudSDKModule extends ReactContextBaseJavaModule {
 
   @ReactMethod
   public void removeTag(final String tag, final Promise promise) {
-    MarketingCloudSDK.requestSdk(new MarketingCloudSDK.WhenReadyListener() {
+    MarketingCloudSdk.requestSdk(new MarketingCloudSdk.WhenReadyListener() {
       @Override
-      public void ready(@NonNull MarketingCloudSDK marketingCloudSdk) {
+      public void ready(@NonNull MarketingCloudSdk marketingCloudSdk) {
         RegistrationManager registrationManager = marketingCloudSdk.getRegistrationManager();
 
         Boolean status = registrationManager
@@ -110,9 +110,9 @@ public class RNMarketingCloudSDKModule extends ReactContextBaseJavaModule {
 
   @ReactMethod
   public void addTags(final ReadableArray tags, final Promise promise) {
-    MarketingCloudSDK.requestSdk(new MarketingCloudSDK.WhenReadyListener() {
+    MarketingCloudSdk.requestSdk(new MarketingCloudSdk.WhenReadyListener() {
       @Override
-      public void ready(@NonNull MarketingCloudSDK marketingCloudSdk) {
+      public void ready(@NonNull MarketingCloudSdk marketingCloudSdk) {
         RegistrationManager registrationManager = marketingCloudSdk.getRegistrationManager();
         RegistrationManager.Editor editor = registrationManager.edit();
 
@@ -129,9 +129,9 @@ public class RNMarketingCloudSDKModule extends ReactContextBaseJavaModule {
 
   @ReactMethod
   public void removeTags(final ReadableArray tags, final Promise promise) {
-    MarketingCloudSDK.requestSdk(new MarketingCloudSDK.WhenReadyListener() {
+    MarketingCloudSdk.requestSdk(new MarketingCloudSdk.WhenReadyListener() {
       @Override
-      public void ready(@NonNull MarketingCloudSDK marketingCloudSdk) {
+      public void ready(@NonNull MarketingCloudSdk marketingCloudSdk) {
         RegistrationManager registrationManager = marketingCloudSdk.getRegistrationManager();
         RegistrationManager.Editor editor = registrationManager.edit();
 
@@ -148,9 +148,9 @@ public class RNMarketingCloudSDKModule extends ReactContextBaseJavaModule {
 
   @ReactMethod
   public void tags(final Promise promise) {
-    MarketingCloudSDK.requestSdk(new MarketingCloudSDK.WhenReadyListener() {
+    MarketingCloudSdk.requestSdk(new MarketingCloudSdk.WhenReadyListener() {
       @Override
-      public void ready(@NonNull MarketingCloudSDK marketingCloudSdk) {
+      public void ready(@NonNull MarketingCloudSdk marketingCloudSdk) {
         RegistrationManager registrationManager = marketingCloudSdk.getRegistrationManager();
 
         Set<String> tags = registrationManager.getTags();
@@ -162,9 +162,9 @@ public class RNMarketingCloudSDKModule extends ReactContextBaseJavaModule {
 
   @ReactMethod
   public void setAttribute(final String name, final String value, final Promise promise) {
-    MarketingCloudSDK.requestSdk(new MarketingCloudSDK.WhenReadyListener() {
+    MarketingCloudSdk.requestSdk(new MarketingCloudSdk.WhenReadyListener() {
       @Override
-      public void ready(@NonNull MarketingCloudSDK marketingCloudSdk) {
+      public void ready(@NonNull MarketingCloudSdk marketingCloudSdk) {
         RegistrationManager registrationManager = marketingCloudSdk.getRegistrationManager();
 
         Boolean status = registrationManager
@@ -179,9 +179,9 @@ public class RNMarketingCloudSDKModule extends ReactContextBaseJavaModule {
 
   @ReactMethod
   public void clearAttribute(final String name, final Promise promise) {
-    MarketingCloudSDK.requestSdk(new MarketingCloudSDK.WhenReadyListener() {
+    MarketingCloudSdk.requestSdk(new MarketingCloudSdk.WhenReadyListener() {
       @Override
-      public void ready(@NonNull MarketingCloudSDK marketingCloudSdk) {
+      public void ready(@NonNull MarketingCloudSdk marketingCloudSdk) {
         RegistrationManager registrationManager = marketingCloudSdk.getRegistrationManager();
 
         Boolean status = registrationManager
@@ -196,9 +196,9 @@ public class RNMarketingCloudSDKModule extends ReactContextBaseJavaModule {
 
   @ReactMethod
   public void attributes(final Promise promise) {
-    MarketingCloudSDK.requestSdk(new MarketingCloudSDK.WhenReadyListener() {
+    MarketingCloudSdk.requestSdk(new MarketingCloudSdk.WhenReadyListener() {
       @Override
-      public void ready(@NonNull MarketingCloudSDK marketingCloudSdk) {
+      public void ready(@NonNull MarketingCloudSdk marketingCloudSdk) {
         RegistrationManager registrationManager = marketingCloudSdk.getRegistrationManager();
 
         Map<String, String> attributes = registrationManager.getAttributesMap();
@@ -210,9 +210,9 @@ public class RNMarketingCloudSDKModule extends ReactContextBaseJavaModule {
 
   @ReactMethod
   public void setAttributes(final ReadableMap attributes, final Promise promise) {
-    MarketingCloudSDK.requestSdk(new MarketingCloudSDK.WhenReadyListener() {
+    MarketingCloudSdk.requestSdk(new MarketingCloudSdk.WhenReadyListener() {
       @Override
-      public void ready(@NonNull MarketingCloudSDK marketingCloudSdk) {
+      public void ready(@NonNull MarketingCloudSdk marketingCloudSdk) {
         RegistrationManager registrationManager = marketingCloudSdk.getRegistrationManager();
 
         RegistrationManager.Editor editor = registrationManager.edit();
@@ -234,9 +234,9 @@ public class RNMarketingCloudSDKModule extends ReactContextBaseJavaModule {
 
   @ReactMethod
   public void clearAttributes(final ReadableArray attributes, final Promise promise) {
-    MarketingCloudSDK.requestSdk(new MarketingCloudSDK.WhenReadyListener() {
+    MarketingCloudSdk.requestSdk(new MarketingCloudSdk.WhenReadyListener() {
       @Override
-      public void ready(@NonNull MarketingCloudSDK marketingCloudSdk) {
+      public void ready(@NonNull MarketingCloudSdk marketingCloudSdk) {
         RegistrationManager registrationManager = marketingCloudSdk.getRegistrationManager();
         RegistrationManager.Editor editor = registrationManager.edit();
 
@@ -253,9 +253,9 @@ public class RNMarketingCloudSDKModule extends ReactContextBaseJavaModule {
 
   @ReactMethod
   public void deviceToken(final Promise promise) {
-    MarketingCloudSDK.requestSdk(new MarketingCloudSDK.WhenReadyListener() {
+    MarketingCloudSdk.requestSdk(new MarketingCloudSdk.WhenReadyListener() {
       @Override
-      public void ready(@NonNull MarketingCloudSDK marketingCloudSdk) {
+      public void ready(@NonNull MarketingCloudSdk marketingCloudSdk) {
         RegistrationManager registrationManager = marketingCloudSdk.getRegistrationManager();
 
         String deviceToken = registrationManager.getSystemToken();
@@ -267,9 +267,9 @@ public class RNMarketingCloudSDKModule extends ReactContextBaseJavaModule {
 
   @ReactMethod
   public void appID(final Promise promise) {
-    MarketingCloudSDK.requestSdk(new MarketingCloudSDK.WhenReadyListener() {
+    MarketingCloudSdk.requestSdk(new MarketingCloudSdk.WhenReadyListener() {
       @Override
-      public void ready(@NonNull MarketingCloudSDK marketingCloudSdk) {
+      public void ready(@NonNull MarketingCloudSdk marketingCloudSdk) {
         MarketingCloudConfig config = marketingCloudSdk.getMarketingCloudConfig();
 
         String appID = config.applicationId();
@@ -281,9 +281,9 @@ public class RNMarketingCloudSDKModule extends ReactContextBaseJavaModule {
 
   @ReactMethod
   public void accessToken(final Promise promise) {
-    MarketingCloudSDK.requestSdk(new MarketingCloudSDK.WhenReadyListener() {
+    MarketingCloudSdk.requestSdk(new MarketingCloudSdk.WhenReadyListener() {
       @Override
-      public void ready(@NonNull MarketingCloudSDK marketingCloudSdk) {
+      public void ready(@NonNull MarketingCloudSdk marketingCloudSdk) {
         MarketingCloudConfig config = marketingCloudSdk.getMarketingCloudConfig();
 
         String accessToken = config.accessToken();
@@ -295,9 +295,9 @@ public class RNMarketingCloudSDKModule extends ReactContextBaseJavaModule {
 
   @ReactMethod
   public void deviceIdentifier(final Promise promise) {
-    MarketingCloudSDK.requestSdk(new MarketingCloudSDK.WhenReadyListener() {
+    MarketingCloudSdk.requestSdk(new MarketingCloudSdk.WhenReadyListener() {
       @Override
-      public void ready(@NonNull MarketingCloudSDK marketingCloudSdk) {
+      public void ready(@NonNull MarketingCloudSdk marketingCloudSdk) {
         RegistrationManager registrationManager = marketingCloudSdk.getRegistrationManager();
 
         String deviceIdentifier = registrationManager.getDeviceId();
@@ -309,9 +309,9 @@ public class RNMarketingCloudSDKModule extends ReactContextBaseJavaModule {
 
   @ReactMethod
   public void setPushEnabled(final Boolean enabled, final Promise promise) {
-    MarketingCloudSDK.requestSdk(new MarketingCloudSDK.WhenReadyListener() {
+    MarketingCloudSdk.requestSdk(new MarketingCloudSdk.WhenReadyListener() {
       @Override
-      public void ready(@NonNull MarketingCloudSDK marketingCloudSdk) {
+      public void ready(@NonNull MarketingCloudSdk marketingCloudSdk) {
         PushMessageManager pushMessageManager = marketingCloudSdk.getPushMessageManager();
 
         if (enabled) {
@@ -327,9 +327,9 @@ public class RNMarketingCloudSDKModule extends ReactContextBaseJavaModule {
 
   @ReactMethod
   public void pushEnabled(final Boolean enabled, final Promise promise) {
-    MarketingCloudSDK.requestSdk(new MarketingCloudSDK.WhenReadyListener() {
+    MarketingCloudSdk.requestSdk(new MarketingCloudSdk.WhenReadyListener() {
       @Override
-      public void ready(@NonNull MarketingCloudSDK marketingCloudSdk) {
+      public void ready(@NonNull MarketingCloudSdk marketingCloudSdk) {
         PushMessageManager pushMessageManager = marketingCloudSdk.getPushMessageManager();
 
         Boolean status = pushMessageManager.isPushEnabled();
@@ -345,9 +345,9 @@ public class RNMarketingCloudSDKModule extends ReactContextBaseJavaModule {
 
   @ReactMethod
   public void getAllMessages(final Promise promise) {
-    MarketingCloudSDK.requestSdk(new MarketingCloudSDK.WhenReadyListener() {
+    MarketingCloudSdk.requestSdk(new MarketingCloudSdk.WhenReadyListener() {
       @Override
-      public void ready(@NonNull MarketingCloudSDK marketingCloudSdk) {
+      public void ready(@NonNull MarketingCloudSdk marketingCloudSdk) {
         InboxMessageManager inboxMessageManager = marketingCloudSdk.getInboxMessageManager();
 
         WritableArray messageArray = Arguments.createArray();
