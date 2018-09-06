@@ -232,7 +232,7 @@ RCT_REMAP_METHOD(pushEnabled,
 RCT_REMAP_METHOD(getAllMessages,
                  getAllMessages_resolver:(RCTPromiseResolveBlock)resolve
                  rejecter:(RCTPromiseRejectBlock)reject) {
-  NSMutableArray *messages = [RCTMarketingCloudSDK formatMessages:[[MarketingCloudSDK sharedInstance] sfmc_getAllMessages]];
+  NSMutableArray *messages = [RNMarketingCloudSDK formatMessages:[[MarketingCloudSDK sharedInstance] sfmc_getAllMessages]];
 
   resolve(messages);
 }
@@ -240,7 +240,7 @@ RCT_REMAP_METHOD(getAllMessages,
 RCT_REMAP_METHOD(getUnreadMessages,
                  getUnreadMessages_resolver:(RCTPromiseResolveBlock)resolve
                  rejecter:(RCTPromiseRejectBlock)reject) {
-  NSMutableArray *messages = [RCTMarketingCloudSDK formatMessages:[[MarketingCloudSDK sharedInstance] sfmc_getUnreadMessages]];
+  NSMutableArray *messages = [RNMarketingCloudSDK formatMessages:[[MarketingCloudSDK sharedInstance] sfmc_getUnreadMessages]];
 
   resolve(messages);
 }
@@ -248,7 +248,7 @@ RCT_REMAP_METHOD(getUnreadMessages,
 RCT_REMAP_METHOD(getReadMessages,
                  getReadMessages_resolver:(RCTPromiseResolveBlock)resolve
                  rejecter:(RCTPromiseRejectBlock)reject) {
-  NSMutableArray *messages = [RCTMarketingCloudSDK formatMessages:[[MarketingCloudSDK sharedInstance] sfmc_getReadMessages]];
+  NSMutableArray *messages = [RNMarketingCloudSDK formatMessages:[[MarketingCloudSDK sharedInstance] sfmc_getReadMessages]];
 
   resolve(messages);
 }
@@ -256,7 +256,7 @@ RCT_REMAP_METHOD(getReadMessages,
 RCT_REMAP_METHOD(getDeletedMessages,
                  getDeletedMessages_resolver:(RCTPromiseResolveBlock)resolve
                  rejecter:(RCTPromiseRejectBlock)reject) {
-  NSMutableArray *messages = [RCTMarketingCloudSDK formatMessages:[[MarketingCloudSDK sharedInstance] sfmc_getDeletedMessages]];
+  NSMutableArray *messages = [RNMarketingCloudSDK formatMessages:[[MarketingCloudSDK sharedInstance] sfmc_getDeletedMessages]];
 
   resolve(messages);
 }

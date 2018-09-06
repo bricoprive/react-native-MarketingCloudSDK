@@ -1,6 +1,6 @@
 {
-  "name": "react-native-marketing-cloud-sdk",
-  "version": "0.0.1",
+  "name": "@dferro/react-native-marketing-cloud-sdk",
+  "version": "0.0.5",
   "description": "React Native bridge for Salesforce Marketing Cloud SDK for iOS and Android",
   "main": "./src/index.js",
   "scripts": {
@@ -13,5 +13,6 @@
   "license": "BSD",
   "peerDependencies": {
     "react-native": "^0.56.0"
-  }
+  },
+  "scope": "dferro"
 }

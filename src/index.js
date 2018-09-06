@@ -4,7 +4,7 @@ import { NativeModules } from 'react-native';
 const { RNMarketingCloudSdk } = NativeModules;
 
 
-class MarketingCloud {
+class MarketingCloudSDK {
   /**
    * Base Methods
    */
