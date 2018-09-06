@@ -13,7 +13,7 @@ import com.facebook.react.bridge.JavaScriptModule;
 public class RNMarketingCloudSDKPackage implements ReactPackage {
     @Override
     public List<NativeModule> createNativeModules(ReactApplicationContext reactContext) {
-      return Arrays.<NativeModule>asList(new RNMarketingCloudSdkModule(reactContext));
+      return Arrays.<NativeModule>asList(new RNMarketingCloudSDKModule(reactContext));
     }
 
     // Deprecated from RN 0.47
