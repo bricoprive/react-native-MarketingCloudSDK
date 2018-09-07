@@ -36,7 +36,7 @@ public class RNMarketingCloudSDKModule extends ReactContextBaseJavaModule {
 
   @Override
   public String getName() {
-    return "MarketingCloudSDK";
+    return "RNMarketingCloudSDK";
   }
 
   /*
