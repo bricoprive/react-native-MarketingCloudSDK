@@ -1,7 +1,7 @@
 
 import { NativeModules } from 'react-native';
 
-const { RNMarketingCloudSdk } = NativeModules;
+const { RNMarketingCloudSDK } = NativeModules;
 
 
 class MarketingCloudSDK {
