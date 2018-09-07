@@ -26,7 +26,10 @@ DerivedData
 *.hmap
 *.ipa
 *.xcuserstate
-project.xcworkspace
+*.xcworkspace
+Pods
+Podfile*
+
 
 # Android/IntelliJ
 #

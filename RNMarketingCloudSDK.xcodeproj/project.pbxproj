@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D73EC75F917E8885ED5B059 /* libPods-RNMarketingCloudSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 677D3B99ED97E4834BCDAC7C /* libPods-RNMarketingCloudSDK.a */; };
 		B3E7B58A1CC2AC0600A0062D /* RNMarketingCloudSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* RNMarketingCloudSDK.m */; };
 /* End PBXBuildFile section */
 
@@ -24,6 +25,9 @@
 
 /* Begin PBXFileReference section */
 		134814201AA4EA6300B7C361 /* libRNMarketingCloudSDK.temp_caseinsensitive_rename.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNMarketingCloudSDK.temp_caseinsensitive_rename.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A525FF4A131137B6A023ECA /* Pods-RNMarketingCloudSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNMarketingCloudSDK.release.xcconfig"; path = "Pods/Target Support Files/Pods-RNMarketingCloudSDK/Pods-RNMarketingCloudSDK.release.xcconfig"; sourceTree = "<group>"; };
+		677D3B99ED97E4834BCDAC7C /* libPods-RNMarketingCloudSDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RNMarketingCloudSDK.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		88E9498C4E298EAE59DC9895 /* Pods-RNMarketingCloudSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNMarketingCloudSDK.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RNMarketingCloudSDK/Pods-RNMarketingCloudSDK.debug.xcconfig"; sourceTree = "<group>"; };
 		B3E7B5881CC2AC0600A0062D /* RNMarketingCloudSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RNMarketingCloudSDK.h; path = RNMarketingCloudSDK/RNMarketingCloudSDK.h; sourceTree = "<group>"; };
 		B3E7B5891CC2AC0600A0062D /* RNMarketingCloudSDK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RNMarketingCloudSDK.m; path = RNMarketingCloudSDK/RNMarketingCloudSDK.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -33,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D73EC75F917E8885ED5B059 /* libPods-RNMarketingCloudSDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,7 +58,26 @@
 				B3E7B5881CC2AC0600A0062D /* RNMarketingCloudSDK.h */,
 				B3E7B5891CC2AC0600A0062D /* RNMarketingCloudSDK.m */,
 				134814211AA4EA7D00B7C361 /* Products */,
+				5C1191D0432C5B7E836DE870 /* Pods */,
+				AFB8DA2FCE7A0D7582114839 /* Frameworks */,
 			);
+			sourceTree = "<group>";
+		};
+		5C1191D0432C5B7E836DE870 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				88E9498C4E298EAE59DC9895 /* Pods-RNMarketingCloudSDK.debug.xcconfig */,
+				2A525FF4A131137B6A023ECA /* Pods-RNMarketingCloudSDK.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		AFB8DA2FCE7A0D7582114839 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				677D3B99ED97E4834BCDAC7C /* libPods-RNMarketingCloudSDK.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -63,9 +87,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 58B511EF1A9E6C8500147676 /* Build configuration list for PBXNativeTarget "RNMarketingCloudSDK" */;
 			buildPhases = (
+				0AA1BA53B6CEA22C7F628BE2 /* [CP] Check Pods Manifest.lock */,
 				58B511D71A9E6C8500147676 /* Sources */,
 				58B511D81A9E6C8500147676 /* Frameworks */,
 				58B511D91A9E6C8500147676 /* CopyFiles */,
+				B04F2F200F02CB86742D57C0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -106,6 +132,45 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0AA1BA53B6CEA22C7F628BE2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RNMarketingCloudSDK-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B04F2F200F02CB86742D57C0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-RNMarketingCloudSDK/Pods-RNMarketingCloudSDK-resources.sh",
+				"${PODS_ROOT}/MarketingCloudSDK/MarketingCloudSDK/MarketingCloudSDK.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MarketingCloudSDK.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RNMarketingCloudSDK/Pods-RNMarketingCloudSDK-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		58B511D71A9E6C8500147676 /* Sources */ = {
@@ -218,6 +283,7 @@
 		};
 		58B511F01A9E6C8500147676 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88E9498C4E298EAE59DC9895 /* Pods-RNMarketingCloudSDK.debug.xcconfig */;
 			buildSettings = {
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -234,6 +300,7 @@
 		};
 		58B511F11A9E6C8500147676 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A525FF4A131137B6A023ECA /* Pods-RNMarketingCloudSDK.release.xcconfig */;
 			buildSettings = {
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
