@@ -17,8 +17,8 @@ class MarketingCloudSDK {
     return RNMarketingCloudSDK.tearDown();
   }
 
-  static setContactkey(contactKey) {
-    return RNMarketingCloudSDK.setContactkey(contactKey);
+  static setContactKey(contactKey) {
+    return RNMarketingCloudSDK.setContactKey(contactKey);
   }
 
   static contactKey() {
